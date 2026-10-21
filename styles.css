@@ -62,13 +62,14 @@ main:focus { outline: none; }
 .nav-cta { background: var(--gold); color: var(--ink) !important; padding: .4rem .9rem !important; border-radius: 999px; font-weight: 700; }
 
 /* Hero */
-.hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 70%, var(--teal-dark) 130%); color: var(--white); padding: 4.5rem 0 5rem; }
+.hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 70%, var(--teal-dark) 130%); color: var(--white); padding: 3rem 0 3.5rem; }
 .hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: center; }
 .hero h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); line-height: 1.15; margin: .4rem 0 1rem; }
 .lede { font-size: 1.2rem; max-width: 60ch; color: #e6ecf3; }
 .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; font-weight: 700; color: var(--teal); margin: 0; }
 .hero .eyebrow { color: var(--gold); }
-.hero-actions { display: flex; gap: .9rem; flex-wrap: wrap; margin-top: 1.8rem; }
+.hero-actions { display: flex; gap: .9rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.audiences { margin: 1.2rem 0 0; color: #d5deea; font-size: .95rem; }
 
 .deadline-card { background: var(--white); color: var(--ink); border-radius: var(--radius); padding: 1.6rem; box-shadow: 0 20px 40px rgba(0,0,0,.25); border-top: 6px solid var(--gold); }
 .deadline-card h2 { margin: 0 0 .4rem; font-size: 1.3rem; color: var(--navy); }
@@ -88,19 +89,20 @@ main:focus { outline: none; }
 .hero .btn-ghost:hover { background: rgba(255,255,255,.1); color: var(--white); }
 
 /* Sections */
-.section { padding: 4.5rem 0; }
+.section { padding: 3rem 0; }
 .section.alt { background: var(--sand); }
 .section h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.2; margin: .3rem 0 .8rem; color: var(--navy); }
-.section-lede { font-size: 1.125rem; color: var(--muted); max-width: 68ch; margin-bottom: 2.2rem; }
+.section-lede { font-size: 1.125rem; color: var(--muted); max-width: 68ch; margin-bottom: 1.5rem; }
 
 .feature-grid, .audience-grid, .pricing-grid, .process, .course-list { list-style: none; padding: 0; margin: 0; }
 
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-.feature { border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; border-top: 4px solid var(--teal); }
+.feature { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; border-top: 4px solid var(--teal); }
+.feature p { font-size: .95rem; }
 .feature h3, .audience h3 { margin: 0 0 .4rem; font-size: 1.15rem; color: var(--navy); }
 .feature p, .audience p { margin: 0; color: var(--muted); }
 
-.process-title { margin: 3rem 0 1rem; font-size: 1.35rem; color: var(--navy); }
+.process-title { margin: 2rem 0 1rem; font-size: 1.35rem; color: var(--navy); }
 .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
 .process li { display: flex; gap: .8rem; align-items: flex-start; }
 .step-num { flex: none; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--navy); color: var(--white); display: grid; place-items: center; font-weight: 700; }
@@ -114,8 +116,8 @@ main:focus { outline: none; }
 .badge svg { width: 52px; height: 52px; color: var(--gold); flex: none; }
 .badge strong { display: block; font-size: 1.15rem; }
 .badge span { color: #d5deea; }
-.course-list { display: grid; gap: .7rem; }
-.course-list li { display: flex; gap: .9rem; align-items: flex-start; border: 1px solid var(--line); border-radius: 12px; padding: .9rem 1rem; }
+.course-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+.course-list li { display: flex; gap: .9rem; align-items: flex-start; border: 1px solid var(--line); border-radius: 12px; padding: .7rem .9rem; align-items: center; }
 .course-list strong { display: block; color: var(--navy); }
 .course-list span:not(.check) { color: var(--muted); font-size: .95rem; }
 .check { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--teal); color: var(--white); display: grid; place-items: center; font-weight: 700; }
@@ -170,7 +172,7 @@ main:focus { outline: none; }
   .process { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 800px) {
-  .hero-grid, .cred-grid, .footer-inner { grid-template-columns: 1fr; }
+  .hero-grid, .cred-grid, .footer-inner, .course-list { grid-template-columns: 1fr; }
   .feature-grid, .audience-grid, .addons, .pricing-grid { grid-template-columns: 1fr; }
   .site-header { position: static; }
 }
